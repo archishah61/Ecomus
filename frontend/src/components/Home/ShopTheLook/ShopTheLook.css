@@ -1,0 +1,276 @@
+.shopTheLook{
+    width: 100%;
+    margin-top: 60px;
+}
+
+.stl-swiper{
+    height: 600px;
+}
+.shopthelook-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+.shopthelook-subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.stl-img {
+    position: relative;
+    width:759px;
+}
+
+.stl-btn1 {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    text-align: center;
+}
+
+.btn-1 {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border: none;
+}
+
+.dot-1{
+    position: absolute;
+    top: 28%;
+    left: 30%;
+    height: 7px;
+    width: 7px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.detail-1{
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 30%;
+    height: 70px;
+    width: 300px;
+    display: none;
+}
+
+.p-img1{
+    position: absolute;
+    padding: 10px;
+    display: inline-flex;
+}
+
+.p-name{
+    position: absolute  ;
+    left: 25%;
+    top: 15%;
+}
+
+.p-price{
+    position: absolute;
+    left: 25%;
+    top: 45%;
+}
+.stl-eye-btn{
+    position: absolute;
+    left: 80%;
+    top: 23%;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: auto;
+}
+.stl-btn2 {
+    position: absolute;
+    top: 85%;
+    left: 65%;
+    text-align: center;
+}
+
+.detail-2{
+    position: absolute;
+    background-color: white;
+    top: 70%;
+    left: 45%;
+    height: 70px;
+    width: 300px;
+    display: none;
+}
+
+.stl-btn3 {
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    text-align: center;
+}
+
+.detail-3{
+    position: absolute;
+    background-color: white;
+    top: 7%;
+    left: 45%;
+    height: 70px;
+    width: 300px;
+    display: none;
+}
+
+.p-img1{
+    width: 50px;
+    height: 73px;
+    margin-top: -2px;
+}
+
+.row {
+    width: 100%;
+    padding-top: 20px;
+}
+ /* mobile */
+@media screen and (max-width:480px){
+    .shopTheLook{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .shopthelook-subtitle{
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 15px;
+    }
+    .stl-img img{
+        width: 357px;
+    }
+    .stl-swiper{
+        height: 460px;
+    }
+    .p-img1 img{
+        height: 45px;
+        width: 100px;
+        margin-top: -6px;
+    }
+
+    .p-name{
+        top:5%;
+        left:58px;
+    }
+    .p-price{
+        left:58px;
+    }
+
+    .stl-btn1 {
+        position: absolute;
+        top: 61%;
+        left: 22%;
+    }
+    .stl-btn2 {
+        position: absolute;
+        top: 84%;
+        left: 22%;
+    }
+    .stl-btn3 {
+        position: absolute;
+        top: 13%;
+        left: 20%;
+    }
+    .detail-1{
+        top:38%;
+        left:4%;
+        height: 52px;
+        width: 274px;
+    }
+
+    .detail-2{
+        top:62%;
+        left:4%;
+        height: 52px;
+        width: 274px;
+    }
+
+    .detail-3{
+        top:27%;
+        left:4%;
+        height: 52px;
+        width: 274px;
+    }
+
+    .stl-swiper{
+        height: 265px;
+    }
+}
+
+
+/* Media Query for tablet */
+@media screen and (min-width:480px) and (max-width:768px){
+    .shopTheLook{
+        width: 100%;
+        margin-top: 8%;
+    }
+    .shopTheLook-title{
+        width: 100%;
+        margin-top: 15%;
+    }
+    .shopthelook-subtitle{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .stl-img img{
+        width: 381px;
+    }
+    .stl-swiper{
+        height: 460px;
+    }
+    .p-img1 img{
+        height: 45px;
+        width: 100px;
+        margin-top: -6px;
+    }
+
+    .stl-btn1{
+        top:170px;
+        left:177px;
+        position: absolute;
+    }
+
+    .stl-btn2{
+        top:226px;
+        left:192px;
+        position: absolute;
+    }
+
+    .stl-btn3{
+        top:12%;
+        left:23%;
+        position: absolute;
+    }
+
+    .detail-1{
+        top:38%;
+        left:4%;
+        height: 52px;
+        width: 274px;
+    }
+
+    .detail-2{
+        top:62%;
+        left:4%;
+        height: 52px;
+        width: 274px;
+    }
+
+    .detail-3{
+        top:27%;
+        left:4%;
+        height: 52px;
+        width: 274px;
+    }
+    .p-name{
+        top:5%;
+        left:58px;
+    }
+    .p-price{
+        left:58px;
+    }
+
+}

@@ -1,0 +1,392 @@
+.progress-bar {
+    height: 44px;
+}
+
+.progress {
+    height: 5px !important;
+    z-index: -2 !important;
+    border-radius: 9.5px;
+    background-color: #fff !important;
+}
+
+.progress-bar-filled {
+    height: 100%;
+    border-radius: 9.5px;
+    background-color: red;
+}
+
+.progress-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: -1px;
+    transform: translateX(-50%);
+}
+
+.progress-dot img {
+    transform: scale(1.2);
+    top: -2px;
+    position: relative;
+}
+
+.truck-container{
+    border: 2px solid red;
+    position: relative;
+    top: 102px;
+    width: 36px;
+}
+
+
+
+.cart-main-title {
+    font-family: "Albert sans";
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+}
+
+.cart-modal-container {
+    font-family: "Albert Sans";
+}
+
+
+.cart-product-title {
+    width: 190px;
+    font-size: 16px;
+    position: relative;
+    top: 11px;
+}
+
+.cart-sidebar .cart-products {
+    height: 144px;
+    position: fixed;
+    width: 33%;
+}
+
+.cart-sidebar .cart-products .cart-product-details {
+    width: 90% !important;
+    height: 7rem !important;
+    position: relative;
+    left: -40px;
+}
+
+.cart-sidebar .cart-products .cart-product {
+    margin-bottom: 50px !important;
+}
+
+.cart-products .cart-product img {
+    height: 149px;
+    margin: 5px;
+    padding: 6px;
+}
+
+.cart-products .youmay-also-like {
+    height: 135px;
+    width: 21rem;
+    position: absolute;
+    left: 17px;
+    margin-bottom: 33px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 6px;
+}
+
+.cart-products .youmay-also-like .ymal {
+    position: relative;
+    left: 13px;
+    top: 3px;
+}
+
+.cart-products .youmay-also-like .ymal-swiper {
+    height: 7rem;
+}
+
+.cart-products .youmay-also-like .ymal-swiper .eye-icon {
+    position: relative;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-size: 27px;
+    align-items: center;
+    width: 43px;
+    left: 14px;
+    top: -12px;
+}
+
+.cart-products .youmay-also-like .ymal-swiper .eye-icon svg {
+    position: relative;
+    top: -4px;
+    left: 8px;
+}
+
+.cart-sidebar-body .user-options {
+    background-color: #ebebeb;
+    top: 10rem;
+    height: 48px;
+    position: relative;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    justify-content: space-around;
+    align-items: center;
+    width: 107%;
+    left: -13px;
+}
+
+.cart-sidebar-body .user-options .option {
+    height: 37px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: 28px;
+    background-color: white;
+    margin: 10px !important;
+}
+
+.cart-sidebar-body .user-options .option svg {
+    position: relative;
+    left: 20px;
+    top: -6px;
+}
+
+.ymal-img {
+    height: 87px;
+    width: 67px;
+    position: relative;
+    left: 17px;
+    top: 0px;
+}
+
+.ymal-title {
+    width: 100px;
+    font-size: 14px;
+    position: relative;
+    top: 1px;
+    left: 28px;
+}
+
+.ymal-price {
+    width: 190px;
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+    left: 28px;
+    font-weight: bold;
+}
+
+.cart-product {
+    top: -7px;
+    position: relative;
+}
+
+.quantity {
+    width: 124px;
+    top: -9px;
+    height: 68px;
+    position: relative;
+}
+
+.Remove-a {
+    position: relative;
+    left: 137px;
+    font-size: 13px;
+    top: -30px;
+    color: black;
+}
+
+.Subtotal-ymal {
+    top: 162px;
+    position: relative;
+    width: 360px;
+}
+
+.subtotal-title {
+    font-size: 22px;
+    position: relative;
+    left: 6px;
+}
+
+.subtotal-input {
+    position: relative;
+    left: 242px;
+    top: -46px;
+    font-size: 19px;
+    font-weight: bold
+}
+
+.Taxes {
+    top: 205px;
+    position: relative;
+    left: 7px
+}
+
+.after-taxes {
+    position: relative;
+    top: 202px;
+}
+
+.Terms-ymal {
+    left: 45px;
+    top: 195px;
+    position: relative;
+}
+
+.agree-radio {
+    left: -32px;
+    position: relative;
+    height: 22px;
+    width: 20px;
+}
+
+.agree-ymal-text {
+    top: -6px;
+    position: relative;
+    left: -14px;
+}
+
+.cart-actions {
+    position: relative;
+    top: 197px;
+}
+
+.action1-view,
+.action2-check {
+    border: 1px solid black;
+    font-family: poppins;
+    text-align: center;
+    width: 317px;
+    left: 20px;
+    position: relative;
+    top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.action2-check {
+    top: 26px;
+}
+
+.action1-view:hover,
+.action2-check:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* / / Mobile / / */
+@media screen and (max-width:480px) {
+    .cart-sidebar {
+        width: 88% !important;
+    }
+
+    .cart-products .youmay-also-like {
+        height: 135px;
+        width: 17rem;
+        position: absolute;
+        left: 11px;
+        margin-bottom: 33px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 6px;
+    }
+
+    .cart-sidebar .cart-products {
+        height: 144px;
+        position: fixed;
+        width: 79%;
+    }
+
+    .cart-sidebar .cart-products .cart-product-details {
+        width: 90% !important;
+        height: 7rem !important;
+        position: relative;
+        left: -11px;
+    }
+
+    .cart-product-title {
+        width: 132px;
+        font-size: 16px;
+        position: relative;
+        top: 11px;
+    }
+
+    .Remove-a {
+        position: relative;
+        left: 128px;
+        font-size: 13px;
+        top: -30px;
+        color: black;
+    }
+
+    .cart-products .youmay-also-like .ymal-swiper .eye-icon {
+        position: relative;
+        background-color: black;
+        color: white;
+        border-radius: 50%;
+        font-size: 27px;
+        align-items: center;
+        width: 43px;
+        left: -13px;
+        top: -12px;
+    }
+
+    .subtotal-input {
+        left: 192px;
+    }
+
+    .Taxes {
+        width: 283px;
+    }
+
+    .Terms-ymal {
+        left: 34px;
+        top: 195px;
+        position: relative;
+    }
+
+    .action1-view {
+        width: 282px;
+        left: 14px;
+    }
+
+    .action2-check {
+        width: 282px;
+        left: 14px;
+    }
+
+    .agree-radio {
+        left: -25px;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:768px) {
+    .cart-products .youmay-also-like {
+        height: 135px;
+        width: 21rem;
+        position: absolute;
+        left: 17px;
+        margin-bottom: 33px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 6px;
+    }
+
+    .cart-sidebar .cart-products {
+        height: 144px;
+        position: fixed;
+        width: 48%;
+    }
+
+    .cart-sidebar .cart-products .cart-product-details {
+        width: 90% !important;
+        height: 7rem !important;
+        position: relative;
+        left: -6px;
+    }
+
+    .action1-view {
+        left: 10px;
+        position: relative;
+        width: 144px;
+    }
+
+    .action2-check {
+        left: 186px;
+        position: relative;
+        width: 144px;
+        top: -29px;
+    }
+}

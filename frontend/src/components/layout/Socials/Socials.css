@@ -1,0 +1,100 @@
+.main-socials {
+    z-index: 5;
+    position: relative;
+    background-color: white;
+}
+
+.social-icons{
+    display: flex;
+    padding: 0px 25px;
+}
+
+.social-icon {
+    border-radius: 50% !important;  
+    color: black !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    width: 30px !important; 
+    height: 30px !important; 
+    background-color: #0000000d !important;
+    padding: 5px;
+}
+
+
+.center-div {
+    text-align: center;
+    margin-right: 93px;
+}
+
+.center-div h2 {
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-family: "Albert Sans";
+    font-weight: 600;
+}
+
+.dropdown-toggle {
+    font-family: "Albert Sans";
+    font-weight: 600;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.form-select {
+    font-size: 0.9rem;
+    font-family: "Albert Sans";
+    font-weight: 600;
+    margin: 5px !important    ;
+}
+
+.left-div,
+.right-div {
+    display: flex;
+    align-items: center;
+}
+
+.right-div #countryDropdown{
+    z-index: 1000;
+    top: 0px;
+}
+
+/* / Media Query for Responsive Mobile Design / */
+@media (max-width: 480px) {
+    .social-icons .social-icon,
+    .right-div {
+        display: none;
+    }
+    
+    .center-div {
+        position: relative;
+        left: 40px;
+        
+    }
+    
+    .center-div h2{
+        width: 228px;
+    }
+}
+
+
+/* Tablet */
+@media screen and (min-width : 480px) and (max-width:768px) {
+    .social-icons .social-icon,
+    .right-div {
+        display: none;
+    }
+    
+    .center-div {
+        position: relative;
+        margin-right: 14rem;
+    }
+    
+    .center-div h2{
+        width: 228px;
+    }
+    
+}

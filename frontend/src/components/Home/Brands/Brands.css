@@ -1,0 +1,86 @@
+#brand-name-logos {
+  padding: 20px;
+}
+
+#brand-name-logos .mySwiper {
+  padding-bottom: 2.25rem;
+  margin-top: 1.5rem;
+}
+
+
+
+#brand-name-logos .logo-container-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgray;
+  /* Light gray border */
+  padding: 10px;
+  /* Space inside the border */
+  height: 10%;
+  /* Ensures logos are vertically centered */
+  background-color: white;
+  /* Background for the logo container */
+  flex: 1;
+  /* Allow the logos to grow equally */
+  margin: 0;
+  /* Remove any margin to eliminate gaps */
+}
+
+#brand-name-logos .brand-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+#brand-name-logos .brand-logos-header {
+  margin-bottom: 20px;
+}
+
+#brand-name-logos .swiper-pagination-bullet {
+
+  background: #fff;
+  border: 1px solid #000;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin: 0 8px;
+  opacity: 1;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#brand-name-logos .swiper-pagination-bullet-active {
+  background: #000;
+}
+
+@media screen and (min-width:480px) and (max-width:768px) {
+  #brand-name-logos .mySwiper {
+    margin-top: 1.5rem;
+    height: 100px;
+  }
+
+  .logo-container-image {
+    height: 100% !important;
+  }
+
+  #brand-name-logos {
+    height: 30%;
+  }
+}
+
+
+
+@media screen and (max-width:480px) {
+  #brand-name-logos .mySwiper {
+    margin-top: 1.5rem;
+    height: 100px;
+  }
+
+  .logo-container-image {
+    height: 100% !important;
+  }
+
+  #brand-name-logos {
+    height: 30%;
+  }
+}

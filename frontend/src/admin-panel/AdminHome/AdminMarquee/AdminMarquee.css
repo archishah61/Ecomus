@@ -1,0 +1,91 @@
+.cards-container .card {
+  position: relative;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #007bff;
+  /* Bootstrap primary color */
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 0.2s;
+}
+
+.cards-container .card:hover .edit-icon {
+  opacity: 1;
+  /* Show icon on hover */
+}
+
+.custom-card {
+  height: 18em;
+  width: 18em;
+  background-color: white;
+  position: relative;
+  margin: auto;
+  border-radius: 1em;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.circle {
+  height: 5em;
+  width: 5em;
+  position: absolute;
+  top: -2.5em;
+  right: -2.5em;
+  border-radius: 50%;
+  background-color: #FF5800;
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.custom-card:hover .circle {
+  transform: scale(10);
+}
+
+.custom-button {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  font-size: 0.8em;
+  color: #6C3082;
+  transition: color 0.5s;
+}
+
+.custom-button:hover {
+  color: white;
+}
+
+.button-text {
+  position: relative;
+}
+
+.underline {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.16em;
+  background-color: #6C3082;
+  bottom: 0;
+  left: 0;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover .underline {
+  background-color: white;
+}
+
+.card-title {
+  z-index: 20;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.5s;
+  position: relative;
+  left: 17px;
+}
+
+.custom-card:hover .card-title {
+  color: white;
+}

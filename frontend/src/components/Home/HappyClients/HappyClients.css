@@ -1,0 +1,346 @@
+:root {
+    --swiper-navigation-size: 20px;
+}
+
+.happy-client {
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 9%;
+}
+
+.happy-clients-title {
+    text-align: center;
+}
+
+.happy-clients-subtitle {
+    text-align: center;
+}
+
+.client-swiper {
+    height: 500px;
+    width: 105%;
+}
+
+.stars {
+    display: inline-flex;
+}
+
+.star-icon {
+    color: orange;
+    padding-right: 8px;
+    font-size: 30px;
+}
+
+.review {
+    width: 250px;
+}
+
+.heading p {
+    font-weight: bold;
+}
+
+.clients {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 380px;
+    padding: 30px;
+    width: 380px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.name-country {
+    position: relative;
+}
+
+.name {
+    width: 100px;
+    font-weight: 600;
+}
+
+.country {
+    position: absolute;
+    top: 100%;
+}
+
+.client-product {
+    position: relative;
+    padding-top: 5px;
+    display: inline-flex;
+}
+
+.client-product-img img {
+    height: 90px;
+    width: 70px;
+}
+
+.name-price {
+    position: relative;
+    left: 10%;
+}
+
+.client-product-name {
+    position: absolute;
+    left: 130%;
+    top: 25%;
+    width: 200px;
+}
+
+.client-product-price {
+    position: absolute;
+    left: 130%;
+    top: 50%;
+    width: 200px;
+    font-weight: 700;
+}
+
+.hr {
+    margin-top: 50px;
+}
+
+.happy-client-swiper .swiper-button-prev {
+    color: black;
+    top: 35%;
+    left: 0;
+    font-size: var(--swiper-navigation-size);
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.happy-client-swiper .swiper-button-next {
+    color: black;
+    top: 35%;
+    left: 96.5%;
+    font-size: var(--swiper-navigation-size);
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+
+
+
+/* Tablet */
+@media screen and (max-width:768px) {
+    .happy-client {
+        width: 768px;
+        margin-bottom: 100px;
+        margin-right: 0% !important;
+        left: -57px !important;
+        position: relative !important;
+    }
+
+    .client-swiper {
+        height: 600px;
+    }
+
+    .clients {
+        margin: 15px;
+        height: 550px;
+        padding: 50px;
+        width: 100%;
+        margin-left: 25px;
+    }
+
+    .happy-client-swiper {
+        width: 100% !important;
+    }
+
+    .happy-client .swiper-slide{
+        margin-right: 25px;
+    } 
+
+    .stars {
+        padding-right: 15px;
+    }
+
+    .star-icon {
+        font-size: 40px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .review {
+        width: 392px;
+        font-size: 20px;
+    }
+
+    .name,
+    .country {
+        width: 300px;
+        font-size: 25px;
+
+    }
+
+    .hr {
+        margin-top: 100px;
+    }
+
+    .client-product {
+        width: 500px;
+        margin-top: 20px;
+        top: -24px;
+        left: -37px;
+    }
+
+    .client-product-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .client-product-name {
+        font-size: 20px;
+        top: 0;
+        width: 300px;
+    }
+
+    .happy-clients-title {
+        margin-left: 50px;
+    }
+
+    .happy-clients-subtitle {
+        margin-left: 50px;
+    }
+
+    .client-product-price {
+        font-size: 21px;
+        top: 35%;
+        width: 300px;
+    }
+
+    .happy-client-swiper .swiper-button-prev {
+        color: black;
+        top: 45%;
+        left: 0;
+        font-size: 90px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        padding: 20px;
+    }
+
+    .happy-client-swiper .swiper-button-next {
+        color: black;
+        top: 45%;
+        left: 95.4%;
+        font-size: 90px !important;
+        border: 2px solid #000;
+        border-radius: 50%;
+        padding: 20px;
+    }
+
+
+}
+
+.happy-client .swiper-slide  {
+    text-decoration: none;
+}
+
+
+/* Mobile */
+@media screen and (max-width:480px) {
+    .happy-client {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .client-swiper {
+        height: 690px;
+        width: 422px;
+        left: -44px;
+    }
+
+    .clients {
+        width: 339px;
+        margin: 15px;
+        height: 650px;
+        padding: 50px;
+        margin-left: 25px;
+    }
+
+    .stars {
+        padding-right: 15px;
+    }
+
+    .star-icon {
+        font-size: 50px;
+    }
+
+    .heading {
+        font-size: 18px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .review {
+        width: 83%;
+        font-size: 15px;
+    }
+
+    .happy-client .swiper-slide .swiper-slide-active{
+        right: -12px;
+    }
+
+    .name,
+    .country {
+        width: 300px;
+        font-size: 15px;
+    }
+
+    .hr {
+        margin-top: 100px;
+    }
+
+    .client-product {
+        width: 19%;
+        margin-top: 20px;
+        left: 10px;
+    }
+
+    .client-product-img img {
+        width: 98px;
+        height: 103px;
+    }
+
+    .client-product-name {
+        font-size: 25px;
+        width: 300px;
+        margin-top: 25px;
+    }
+
+    .client-product-price {
+        font-size: 25px;
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    .happy-clients-title {
+        margin-left: 0px;
+    }
+
+    .happy-clients-subtitle {
+        margin-left: 0px;
+    }
+
+    .happy-client-swiper .swiper-button-prev {
+        color: black;
+        top: 50%;
+        left: 0;
+        font-size: 90px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        padding: 20px;
+    }
+
+    .happy-client-swiper .swiper-button-next {
+        color: black;
+        top: 50%;
+        left: 93%;
+        font-size: 90px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,12 @@
+.wishlist-header {
+    background: linear-gradient(135deg, #d9a7c7 60%, #fffcdc);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 7rem;
+    font-family: "Albert Sans";
+}
+
+.wishlist-header p {
+    font-size: 3rem;
+}

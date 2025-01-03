@@ -1,0 +1,426 @@
+/* Updated CSS */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.logo {
+  height: 40px;
+  margin-left: 15px;
+}
+
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navlink {
+  margin: 0 20px;
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.navlink:hover {
+  color: #666;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent !important;
+}
+
+.header-icon {
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: transparent !important;
+  transition: background-color 0.3s ease;
+}
+
+.header-icon:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  transition: all 5s ease;
+}
+
+.dropdown .navlink-main::after{
+  content: '▼';
+  font-size: 8px;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Giant Box */
+.giant-box {
+  height: auto;
+  width: 97rem;
+  display: none;
+  position: fixed;
+  top: 90px;
+  left: 0px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 2000;
+}
+
+.giant-box .dropdown-content {
+  height: 100%;
+  position: static;
+}
+
+
+.giant-box .dropdown-content .col p {
+  left: 29px;
+  position: relative;
+  font-weight: 600;
+}
+
+.giant-box .dropdown-content .col div {
+  margin-top: 20px !important;
+}
+
+.giant-box .dropdown-content .col .men-img {
+  position: relative;
+  top: -1rem;
+  width: 15rem;
+  left: -3rem;
+  height: 18rem;
+}
+
+.giant-box .dropdown-content .col .men-img img {
+  height: inherit;
+  width: inherit;
+  border-radius: 10px;
+}
+
+.dropdown .giant-box .dropdown-content .home-imgs {
+  width: 12rem;
+  height: 14rem;
+}
+
+.dropdown .giant-box .dropdown-content .home-explore {
+  transition: all 0.3s ease;
+  margin-top: 0px !important;
+  margin-bottom: 2rem !important;
+}
+
+.dropdown .giant-box .dropdown-content .home-explore .home-page-name {
+  position: relative;
+  top: 9px;
+}
+
+.dropdown .giant-box .dropdown-content .home-explore:hover {
+  transform: scale(1.1);
+  opacity: 0.4;
+  background-image: black;
+}
+
+/* Show giant box on hover */
+.dropdown:hover .giant-box,
+.giant-box:hover {
+  display: block;
+}
+
+
+
+
+/* Page sections styling */
+.page-sections {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  /* Equal width columns */
+  padding: 10px;
+  /* Spacing between columns */
+}
+
+.image-section {
+  margin-top: 20px;
+  /* Space between sections */
+}
+
+.image-section img {
+  width: calc(50% - 10px);
+  /* Adjust image width */
+  margin-right: 10px;
+  /* Space between images */
+}
+
+.image-section img:last-child {
+  margin-right: 0;
+  /* Remove margin from last image */
+}
+
+
+
+
+.user-icon-popup {
+  height: 50px;
+  margin-left: 20px;
+}
+
+.user-icon-email,
+.user-icon-pass {
+  width: 90%;
+  height: 45px;
+  margin-top: 10px;
+  padding-left: 20px;
+  margin-left: 20px;
+  border: 1px solid rgb(161, 151, 151);
+  border-radius: 5px;
+}
+
+.user-icon-forgot-pass {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.user-icon-login {
+  height: 35px;
+  border-radius: 2px;
+}
+
+.user-icon-title {
+  margin-left: 40px;
+}
+
+.user-icon-model .modal-content {
+  height: 330px;
+  padding-top: 20px;
+}
+
+.reset-pass-text {
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.reset-pass {
+  margin-top: 20px;
+  width: 95%;
+}
+
+.create-account-modal .modal-content {
+  height: 380px;
+  padding-top: 20px;
+}
+
+
+
+/* Media Query for Tablet */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar-center {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-btn {
+    display: inline;
+    top: -7px;
+    position: relative;
+  }
+
+  .navbar-center.active {
+    display: flex;
+  }
+
+  .navlink {
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+
+  .dropdown .plus-icon-home,
+  .plus-icon-shop,
+  .plus-icon-product,
+  .plus-icon-blog,
+  .plus-icon-pages {
+    position: relative;
+    left: 265px;
+  }
+
+  .plus-icon-shop {
+    left: 272px;
+  }
+
+  .plus-icon-pages {
+    left: 266px;
+  }
+
+  .plus-icon-product {
+    left: 253px;
+  }
+
+  .plus-icon-blog {
+    left: 274px;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+
+  .dropdown-item {
+    padding: 8px 16px;
+  }
+
+  .sidebar {
+    font-family: "Albert Sans";
+  }
+
+  .sidebar .sidebar-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px !important;
+  }
+
+  .sidebar .btn-close {
+    margin-right: 320px !important;
+  }
+
+  .sidebar .info {
+    margin-left: 19px;
+  }
+
+  .sidebar .info p {
+    margin-top: 15px;
+  }
+
+  .sidebar .sidebar-footer {
+    position: relative;
+    top: 79px;
+  }
+
+  .sidebar .sidebar-select {
+    display: flex;
+  }
+
+  .sidebar .sidebar-footer .select-lang {
+    width: 29%;
+    position: relative;
+    top: -11px;
+  }
+}
+
+
+/* Media Query for Mobile */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 87% !important;
+  }
+
+  .header-icon.user,
+  .header-icon.wishlist {
+    display: none !important;
+  }
+
+  .navbar-right {
+    gap: 0px;
+  }
+
+  .dropdown .plus-icon-home,
+  .plus-icon-shop,
+  .plus-icon-product,
+  .plus-icon-blog,
+  .plus-icon-pages {
+    position: relative;
+    left: 200px;
+  }
+
+  .plus-icon-shop {
+    left: 206px;
+  }
+
+  .plus-icon-pages {
+    left: 200px;
+  }
+
+  .plus-icon-product {
+    left: 187px;
+  }
+
+  .plus-icon-blog {
+    left: 208px;
+  }
+
+  .sidebar .btn-close {
+    margin-left: 22px !important;
+  }
+
+  .sidebar .info {
+    margin-left: 19px;
+  }
+
+  .sidebar .sidebar-footer .select-lang {
+    width: 37%;
+    position: relative;
+    top: -10px
+  }
+}

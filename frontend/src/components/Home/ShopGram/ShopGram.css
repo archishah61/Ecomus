@@ -1,0 +1,132 @@
+#shop-gram {
+    margin-top: -660px;
+}
+
+#shop-gram .shop-gram-slider {
+
+    width: 100%;
+    padding: 0 2rem;
+}
+
+#shop-gram .mySwiper {
+    padding-bottom: 2.25rem;
+
+}
+
+#shop-gram .shop-image-icon {
+    position: relative;
+
+}
+
+#shop-gram .gallery-image {
+    width: 100%;
+    /* Ensure images take full width of the slide */
+    /* Optional: adds rounded corners to images */
+    padding: 0px 5px;
+    border-radius: 15px;
+}
+
+/* Swiper pagination styling */
+#shop-gram .swiper-pagination {
+    bottom: 10px;
+    /* Adjust vertical position of pagination */
+}
+
+#shop-gram .swiper-pagination-bullet {
+    background: black;
+    /* Color of the pagination bullets */
+    border-radius: 50%;
+    /* Make bullets round */
+    width: 12px;
+    /* Bullet width */
+    height: 12px;
+    /* Bullet height */
+    margin: 0 4px;
+    /* Space between bullets */
+}
+
+#shop-gram .swiper-pagination-bullet-active {
+    opacity: 1;
+    /* Active bullet */
+}
+
+#shop-gram .swiper-pagination-bullet:hover {
+    opacity: 0.6;
+    /* Change opacity on hover */
+}
+
+#shop-gram .shop-icon {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 30;
+    color: #000;
+    font-size: 2rem;
+    background-color: #fff;
+    border-radius: 50%;
+
+}
+
+#shop-gram .shop-image-icon:hover .shop-icon {
+
+    visibility: visible;
+    opacity: 1;
+}
+
+#shop-gram .shop-gram-header .p1 {
+    font-size: 40px !important;
+}
+
+#shop-gram .shop-gram-header .p2 {
+    font-size: 18px !important;
+}
+
+
+@media screen and (max-width:1600px) and (min-width:788px) {
+    #shop-gram {
+        top: 38rem;
+        position: relative;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width:480px) {
+    #shop-gram {
+        margin-top: -37px;
+    }
+
+    .shop-gram-slider .mySwiper {
+        height: 200px !important;
+    }
+
+    #shop-gram .shop-icon {
+        height: 32px !important;
+        width: 32px !important;
+        font-size: 1.3rem;
+    }
+
+}
+
+/* / Media Query for Tablet View / */
+@media screen and (min-width:480px) and (max-width:768px) {
+    #shop-gram {
+        margin-top: -39px;
+    }
+
+    .shop-gram-slider .mySwiper {
+        height: 269px !important;
+    }
+
+    #shop-gram .shop-icon {
+        height: 40px !important;
+        width: 40px !important;
+        font-size: 1.5rem;
+    }
+}

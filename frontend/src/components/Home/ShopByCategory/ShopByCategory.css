@@ -1,0 +1,339 @@
+.ShopByCatTest {
+    justify-content: space-evenly;
+    height: 358px;
+    width: 100% !important;
+}
+
+
+.discover {
+    height: 371px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 64px;
+    left: -24px;
+    z-index: 1;
+    background-color: white;
+}
+
+:root {
+    --swiper-navigation-size: 15px;
+}
+
+
+.ShopByCatTest .main-swiper {
+    height: 500px;
+    padding-top: 60px;
+    width: 92% !important;
+}
+
+.ShopByCatTest .swiper-slide {
+    width: 300px !important;
+}
+
+.ShopByCatTest .swipe {
+    border-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative !important;
+    left: 1rem !important;
+}
+
+.ShopByCatTest .swipe img {
+    height: 375px;
+    width: 295px;
+    border: 0px solid black;
+    border-radius: 5px;
+}
+
+.ShopByCatTest .swiper-button-prev {
+    color: black;
+    top: 15px;
+    font-size: var(--swiper-navigation-size);
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.ShopByCatTest .shopbycatHeader {
+    color: black;
+    top: -492px;
+    position: relative;
+    left: 69px;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.ShopByCatTest .swiper-button-next {
+    color: black;
+    top: 15px;
+    left: 45px;
+    font-size: var(--swiper-navigation-size);
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.ShopByCatTest .swiper-slide .swiper-slide-active {
+    left: 3rem !important;
+}
+
+
+.cat-btn {
+    position: absolute;
+    top: 272px;
+    left: 30px;
+    border: none;
+    height: 40px;
+    width: 130px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cat-btn:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+.discover p {
+    text-decoration: none;
+    position: relative !important;
+    margin-top: 140px !important;
+}
+
+
+.discover-arrow {
+    display: flex;
+    margin-top: 35px;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 50px !important;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.discover-arrow:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+
+
+/* Desktop */
+@media screen and (min-width:768px) {
+
+    .main-swiper .swiper-slide {
+        margin-right: 51px !important;
+    }
+
+    .ShopByCatTest .col-md-9 {
+        position: relative;
+        left: 10px;
+    }
+
+    .ShopByCatTest .swipe img {
+        height: 320px;
+        width: 260px;
+    }
+
+    .discover {
+        height: 320px;
+        width: 260px;
+        left: 24px;
+        top: 60px;
+    }
+
+    .cat-btn {
+        margin-top: -40px;
+        margin-left: -10px;
+        height: 35px;
+
+    }
+
+    .discover-arrow {
+        position: relative !important;
+        /* mine */
+        /* top: -21px !important; */
+        /* left: -6rem !important; */
+        /* madam */
+        top: -18px !important;
+        left: -6rem !important;
+        width: 10px;
+    }
+}
+
+/* / Media Query for Mobile View / */
+@media screen and (max-width:480px) {
+    .discover {
+        position: relative !important;
+        top: -15rem !important;
+        left: 9px;
+        width: 100%;
+        height: 67px;
+    }
+
+    .ShopByCatTest .discover .discover-container {
+        position: absolute;
+        top: -157px;
+    }
+
+    .ShopByCatTest .discover-container .discover-arrow {
+        top: -75px !important;
+        left: 150px !important;
+        position: relative !important;
+    }
+
+    .ShopByCatTest {
+        width: 100% !important;
+    }
+
+    .ShopByCatTest .swipe {
+        left: -1rem !important;
+
+    }
+
+    .ShopByCatTest .swiper-slide {
+        width: 156px !important;
+    }
+
+    .ShopByCatTest .swipe img {
+        height: 179px !important;
+        width: 153px !important;
+    }
+
+    .main-swiper .swiper-slide {
+        margin-right: 25px !important;
+    }
+
+    .ShopByCatTest .cat-btn {
+        top: 133px;
+        height: 30px;
+        width: 102px;
+        font-size: 13px;
+    }
+
+    .ShopByCatTest .main-swiper {
+        height: 500px;
+        padding-top: 60px;
+        width: 100% !important;
+        margin-left: 10px;
+    }
+
+    .discover p {
+        margin-top: 170px !important;
+    }
+
+    .ShopByCatTest .swiper-button-next {
+        top: 3%;
+        left: 285px;
+    }
+
+    .ShopByCatTest .swiper-button-prev {
+        top: 3%;
+        left: 250px;
+    }
+
+    .ShopByCatTest .shopbycatHeader {
+        left: -5px;
+        font-size: 20px;
+    }
+}
+
+/* / Media Query for Tablet View / */
+@media screen and (min-width:480px) and (max-width:768px) {
+    .ShopByCatTest .main-swiper {
+        width: 160%;
+        left: 5%;
+    }
+
+    .ShopByCatTest .swipe {
+        left: 4rem !important;
+    }
+
+    .ShopByCatTest .swiper-slide .swiper-slide-active .swiper-slide-next {
+        height: 351px;
+    }
+
+    .ShopByCatTest .swiper .swiper-initialized .swiper-horizontal .main-swiper .swiper-backface-hidden {
+        width: 85% !important;
+    }
+
+    .ShopByCatTest .swiper-slide {
+        width: 167px !important;
+        left: -47px;
+        margin-left: 19px !important;
+    }
+
+    .ShopByCatTest .swipe img {
+        border-radius: 5%;
+        width: 210px;
+        height: 254px;
+    }
+
+    .col-md-9 {
+        width: 75% !important;
+        left: -40px;
+    }
+
+    .cat-btn {
+        top: 220px;
+        left: 23px;
+        height: 34px;
+        width: 147px;
+        font-size: 25px;
+        font-size: 18px;
+    }
+
+    .ShopByCatTest .swiper-button-next {
+        top: 3%;
+        left: 8%;
+    }
+
+    .ShopByCatTest .swiper-button-prev {
+        top: 3%;
+        left: 1%;
+    }
+
+    .discover {
+        height: 254px;
+        width: 176px;
+        margin-left: -30px;
+        position: relative;
+        top: 4rem;
+    }
+
+    .ShopByCatTest .swiper-slide .swiper-slide-active {
+        margin-right: 17px !important;
+    }
+
+    .ShopByCatTest .swiper,
+    .ShopByCatTest .swiper-initialized {
+        left: -23px;
+    }
+
+    .discover p {
+        top: -3rem !important;
+    }
+
+    .discover-arrow {
+        top: -4rem !important;
+        left: -3rem !important;
+    }
+
+    .ShopByCatTest .shopbycatHeader {
+        top: -493px !important;
+        font-size: 20px
+    }
+}

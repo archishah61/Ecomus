@@ -1,0 +1,118 @@
+.main-hero {
+    font-family: 'Albert Sans';
+    height: 672px;
+    top: -56px;
+    position: relative;
+}
+
+.hero-swiper {
+    height: inherit;
+}
+
+.fashion-img {
+    width: 1519px;
+    height: inherit;
+}
+
+.text-content {
+    position: absolute;
+    left: 5%;
+    top: 54%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: black;
+    font-family: "poppins";
+    width: 200px;
+}
+
+.text-content .title{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.text-content .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    width: 500px;
+
+}
+
+.shop-btn {
+    padding: 12px 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 230px;
+}
+
+.hero-swiper .swiper-pagination-bullet{
+    border: 5px solid black;
+}
+
+
+/* / Media Query for Tablet / */
+@media screen and (min-width:480px) and (max-width:768px) {
+    .main-hero{
+        height: 400px;
+        top: -89px;
+    }
+    .hero-swiper {
+        height: inherit;
+    }
+
+    .fashion-img {
+        width: 768px;
+        height: inherit;
+    }
+
+    .text-content .title{
+        font-size: 3rem;
+      
+    }
+
+    .text-content .subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .shop-btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+}
+
+/* / Media Query for Mobile / */
+@media screen and (max-width:480px) {
+    .main-hero {
+        height: 265px;
+        top: -89px;
+    }
+
+    .hero-swiper {
+        height: inherit;
+    }
+
+    .fashion-img {
+        width: 485px;
+        height: inherit;
+    }
+
+    .text-content .title{
+        font-size: 2rem;
+        margin-top: 0px;
+      
+    }
+
+    .text-content .subtitle {
+        display: none;
+    }
+
+
+    .shop-btn {
+        width: 150px;
+        font-size: 0.6rem;
+    }
+}
