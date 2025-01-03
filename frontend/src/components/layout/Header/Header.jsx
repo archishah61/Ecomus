@@ -760,6 +760,7 @@ function Header() {
                         <div className="form-group mt-3">
                             <input
                                 type="file"
+                                
                                 value={imageUrl}
                                 onChange={(e) => setImageUrl(e.target.value)}
                                 placeholder="Product Image URL"
