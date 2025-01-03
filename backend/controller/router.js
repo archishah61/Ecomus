@@ -5,7 +5,9 @@ const Hero = require('../model/modelHero')
 const Marquee = require('../model/modelMarquee');
 const ShopByCat = require('../model/modelShopByCat');
 const BestSeller = require('../model/modelBestSeller');
-
+const User = require("../model/modelUser");
+const Cryptr = require('cryptr');
+const cryptr = new Cryptr('myTotallySecretKey');
 // Route for home page
 router.get('/', (req, res) => {
     res.send('On Home page'); // This should render correctly
@@ -402,7 +404,45 @@ router.delete('/bestseller/:id', async (req, res) => {
     }
 });
 
+// USER
+// POST route for registering a new user
+router.post('/register', async (req, res) => {
+    const { firstName, lastName, email, password, country } = req.body;
 
+    // Simple validation
+    if (!firstName || !lastName || !email || !password || !country) {
+        return res.status(400).json({ message: 'All fields are required.' });
+    }
+
+    try {
+        // Check if the email already exists
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ message: 'Email already Exists.' });
+        }
+
+        // Encrypt the password before saving
+        const encryptedPassword = cryptr.encrypt(password);
+
+        // Create a new user instance
+        const newUser = new User({
+            firstName,
+            lastName,
+            email,
+            password: encryptedPassword, // Store the encrypted password
+            country
+        });
+
+        // Save the new user to the database
+        await newUser.save();
+
+        // Respond with success message
+        res.status(201).json({ message: 'User registered successfully!' });
+    } catch (error) {
+        console.error('Error registering user:', error);
+        res.status(500).json({ message: 'Internal server error.' });
+    }
+});
 
 
 module.exports = router;
