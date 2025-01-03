@@ -16,7 +16,7 @@ function Admin() {
         e.preventDefault();
         if (username === 'admin' && password === '123') {
             console.log('Admin logged in!');
-            //Loggin in admin in context
+            // Logging in admin in context
             login();
             setMessage({ text: 'Login successful! Redirecting to admin panel...', type: 'success' });
             navigate('/admin-panel');
@@ -28,6 +28,12 @@ function Admin() {
 
     return (
         <div className='admin-form'>
+            {message.text && (
+                <div className={`alert alert-${message.type} alert-dismissible fade show`} role="alert">
+                    <strong>{message.type === 'success' ? 'Success!' : 'Error!'}</strong> {message.text}
+                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            )}
             <form className="form" onSubmit={handleSubmit}>
                 <p className="form-title">Log in to Admin Panel</p>
                 <div className="input-container">
@@ -48,13 +54,6 @@ function Admin() {
                 </div>
                 <Button variant="outline-dark login-btn" type='submit'>Log in</Button>
             </form>
-
-            {message.text && (
-                <div style={{ width: '97%' }} className={`alert alert-${message.type} alert-dismissible fade show`} role="alert">
-                    <strong>{message.type === 'success' ? 'Success!' : 'Error!'}</strong> {message.text}
-                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            )}
         </div>
     );
 }

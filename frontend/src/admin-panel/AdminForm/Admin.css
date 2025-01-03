@@ -1,76 +1,129 @@
+/* Admin.css */
+
 .admin-form {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f0f4f8; /* Light background for contrast */
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    /* White background for the form */
+    border-radius: 0.5rem;
+    /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Enhanced shadow for a stronger 3D effect */
+    transition: transform 0.2s ease-in-out;
+    /* Smooth transition for hover effect */
     padding: 2rem;
-    width: 400px; /* Fixed width for better layout */
+    /* Padding around the form */
+    width: 221vh;
+    background-color: #e8e8e8;
+    /* Light gray background for the entire page */
+    font-family: Arial, sans-serif;
+    /* Consistent font across the application */
+    margin: 0;
+    /* Remove default margin */
+    height: 100vh;
+    /* Full height for body */
+    display: flex;
+    /* Flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
+.admin-form:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
 }
 
 .form-title {
     font-size: 1.5rem;
+    /* Larger title font size */
     line-height: 1.75rem;
     font-weight: bold;
     text-align: center;
-    color: #333; /* Darker text for better readability */
-    margin-bottom: 1.5rem; /* Space below title */
+    color: #333;
+    /* Darker text color for better contrast */
+    margin-bottom: 1.5rem;
+    /* Space below title */
 }
+
+
+.form {
+    background-color: #ffffff; /* White background for the form */
+    position: relative; /* For positioning the shadow */
+    padding: 2rem; /* Padding around the form */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 
+                0 6px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a stronger 3D effect */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.form:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
 
 .input-container {
     position: relative;
 }
 
 .input-container input {
-    background-color: #ffffff; /* White input background */
-    padding: .75rem;
+    outline: none;
+    border: solid 1px #e5e7eb;
+    /* Light gray border */
+    margin-bottom: 1rem;
+    /* Space between inputs */
+    padding: 0.75rem;
+    /* Padding inside input fields */
     width: 100%;
-    font-size: .875rem;
-    border-radius: .5rem;
-    border: 2px solid #ddd; /* Light border */
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
-    margin-top: 2rem;
-}
-
-.input-container input:hover {
-    border-color: #007bff; /* Change border color on hover */
+    /* Full width of the container */
+    font-size: 1rem;
+    /* Slightly larger font size */
+    border-radius: 0.5rem;
+    /* Rounded corners for inputs */
+    box-shadow: inset 0px -1px rgba(0, 0, 0, 0.05);
+    /* Inner shadow effect */
+    transition: border-color 0.3s ease-in-out;
+    /* Smooth transition for border color on focus */
 }
 
 .input-container input:focus {
-    outline: none; /* Remove outline */
-    border-color: #007bff; /* Blue border on focus */
+    border-color: #009087;
+    /* Change border color on focus */
 }
 
 .login-btn {
-    margin-top: 1rem; /* Space above button */
-    padding: .75rem; /* Increased padding for button */
-    width: 100%; /* Full width button */
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white; /* White text for contrast */
+    width: 100%;
+    /* Full width button */
+    padding: 0.75rem;
+    /* Padding for button */
+    background-color: #009087;
+    /* Main button color */
+    color: white;
+    /* Text color for button */
+    border-radius: 0.5rem;
+    /* Rounded corners for button */
+    border: none;
+    /* No border for button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    /* Smooth transitions for hover effects */
 }
 
 .login-btn:hover {
-   background-color: #0056b3; /* Darker shade on hover */
-   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #007a74;
+    /* Darker shade on hover */
 }
 
-/* Alert styles for messages */
+.login-btn:active {
+    transform: scale(0.98);
+    /* Slightly shrink button on click */
+}
+
+/* Alert message styles */
+
 .alert {
-   margin-top: 1rem; /* Space above alert */
-   transition: opacity 0.3s ease-in-out; /* Smooth transition for alert visibility */
-}
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-   .admin-form {
-       width: 90%; /* Responsive width for smaller screens */
-       padding: 1.5rem; /* Less padding on small screens */
-   }
+    margin-top: 1rem;
+    padding: .75rem;
+    border-radius: .5rem;
+    text-align: center;
 }
