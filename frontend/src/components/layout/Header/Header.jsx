@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Modal, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { IoSearchSharp } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
@@ -8,7 +9,6 @@ import logo from '../../../assets/images/logo.svg';
 import menu from '../../../assets/images/menu.svg';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { HiOutlinePlus } from "react-icons/hi2";
-import Button from 'react-bootstrap/Button';
 import US from '../../../assets/images/us.svg';
 import DE from '../../../assets/images/de.svg';
 import FR from '../../../assets/images/fr.svg';
@@ -34,6 +34,11 @@ import home11 from '../../../assets/images/home-baby.jpg'
 import home12 from '../../../assets/images/home-decor.jpg'
 import BottomNavbar from '../BottomNavbar/BottomNavbar';
 import SearchSidebar from './SearchSidebar/SearchSidebar';
+import StarRatings from 'react-star-ratings';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+
+import axios from 'axios'; // Make sure to install axios
+
 
 const countries = [
     { value: "1", label: "EUR", flag: DE },
@@ -53,6 +58,13 @@ function Header() {
     const [selectedCountry, setSelectedCountry] = useState(countries[3]);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
+    const [showReviewModal, setShowReviewModal] = useState(false);
+    const [rating, setRating] = useState(0);
+    const [description, setDescription] = useState('');
+    const [imageUrl, setImageUrl] = useState('');
+    const [productTitle, setProductTitle] = useState('');
+    const [productPrice, setProductPrice] = useState('');
+    const productId = 1; // Example product ID
 
     const handleCountrySelect = (country) => {
         setSelectedCountry(country);
@@ -68,6 +80,36 @@ function Header() {
         const selectedLanguage = languages.find(language => language.value === selectedValue);
         setSelectedLanguage(selectedLanguage);
     };
+
+    const handleRatingChange = (newRating) => {
+        setRating(newRating);
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            // Send review data to the backend
+            await axios.post('http://localhost:3000/reviews', {
+                productId,
+                rating,
+                description,
+                imageUrl,
+                productTitle,
+                productPrice,
+            });
+            // Reset form fields
+            setRating(0);
+            setDescription('');
+            setImageUrl('');
+            setProductTitle('');
+            setProductPrice('');
+            setShowReviewModal(false); // Close the modal after submission
+        } catch (error) {
+            console.error('Error submitting review:', error);
+        }
+    };
+
+
     const [isScrolled, setIsScrolled] = useState(false);
 
     // Sidebar
@@ -250,7 +292,7 @@ function Header() {
             {/* Search Sidebar */}
             <SearchSidebar showSearch={showSearch} handleSearchClose={handleSearchClose} />
             {/* Bottom Navbar */}
-            <BottomNavbar handleCartOpen={handleCartOpen} setLoginModal={setLoginModal}  handleSearchShow={handleSearchShow}/>
+            <BottomNavbar handleCartOpen={handleCartOpen} setLoginModal={setLoginModal} handleSearchShow={handleSearchShow} />
             {/* Header */}
             <nav className={`navbar ${isScrolled ? 'sticky' : ''}`}>
                 <div className="navbar-left">
@@ -667,6 +709,7 @@ function Header() {
                     </div>
                 </div>
                 <div className="navbar-right">
+                    <Button onClick={() => setShowReviewModal(true)}>Add Review</Button>
                     <button onClick={handleSearchShow} className="header-icon search"><IoSearchSharp /></button>
                     <button onClick={() => { setLoginModal(true) }} className="header-icon user"><FaRegUser /></button>
                     <button className="header-icon wishlist">
@@ -691,6 +734,60 @@ function Header() {
                     </button>
                 </div>
             </nav>
+            {/* Review Modal */}
+            <Modal show={showReviewModal} onHide={() => setShowReviewModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Add Review</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <form onSubmit={handleSubmit}>
+                        <StarRatings
+                            rating={rating}
+                            starRatedColor="gold"
+                            changeRating={handleRatingChange}
+                            numberOfStars={5}
+                            name='rating'
+                        />
+                        <div className="form-group mt-3">
+                            <textarea
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                                placeholder="Write your review..."
+                                rows="4"
+                                className="form-control"
+                            />
+                        </div>
+                        <div className="form-group mt-3">
+                            <input
+                                type="file"
+                                value={imageUrl}
+                                onChange={(e) => setImageUrl(e.target.value)}
+                                placeholder="Product Image URL"
+                                className="form-control"
+                            />
+                        </div>
+                        <div className="form-group mt-3">
+                            <input
+                                type="text"
+                                value={productTitle}
+                                onChange={(e) => setProductTitle(e.target.value)}
+                                placeholder="Product Title"
+                                className="form-control"
+                            />
+                        </div>
+                        <div className="form-group mt-3">
+                            <input
+                                type="text"
+                                value={productPrice}
+                                onChange={(e) => setProductPrice(e.target.value)}
+                                placeholder="Product Price"
+                                className="form-control"
+                            />
+                        </div>
+                        <Button type="submit" variant="primary" className="mt-3">Submit Review</Button>
+                    </form>
+                </Modal.Body>
+            </Modal>
         </>
     );
 }

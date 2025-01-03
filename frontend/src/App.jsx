@@ -10,6 +10,7 @@ import AdminWishlist from "./admin-panel/AdminWishlist/AdminWishlist";
 import AdminShopByCat from "./admin-panel/AdminHome/AdminShopByCat/AdminShopByCat";
 import AdminMarquee from "./admin-panel/AdminHome/AdminMarquee/AdminMarquee";
 import AdminBestSeller from "./admin-panel/AdminHome/AdminBestSeller/AdminBestSeller";
+import 'bootstrap/dist/css/bootstrap.min.css';
 const router = createBrowserRouter([
   {
     path: "/",
